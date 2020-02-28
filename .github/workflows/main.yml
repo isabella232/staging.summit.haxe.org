@@ -43,7 +43,7 @@ jobs:
       env:
         PATH: $PATH:haxe_20191217082701_67feacebc
 
-    - name: Deploy master to GitHub Pages
+    - name: Deploy if master to GitHub Pages
       run: |
         cd out
         git init
@@ -57,7 +57,7 @@ jobs:
         git push -u origin gh-pages --force
       if: github.ref == 'refs/heads/master'
 
-    - name: Deploy staging to GitHub Pages
+    - name: Deploy if staging to GitHub Pages
       run: |
         cd out
         git init
