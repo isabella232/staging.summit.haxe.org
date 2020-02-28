@@ -414,7 +414,7 @@ iframe {
 	section > div p {
 		padding: 0 1em;
 	}
-	
+
 	section > div div.breadcrumb {
 		padding-left: 6px;
 	}
@@ -476,4 +476,57 @@ iframe {
 	div.big_button a {
 		padding: 0.5em;
 	}
+}
+
+.talkbox {
+	width: 550px;
+	height: 444px;
+	margin: 0px auto 20px auto;
+	position: relative;
+	border: solid 2px;
+}
+
+.talkbox h2, .talkbox h3 {
+	font-weight: bold;
+}
+
+.talkboxbg {
+	background: url("../images/background.jpg");
+	background-size: cover;
+	background-position-x: center;
+	filter: blur(4px);
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.talkboxcontent {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.talkboxleft {
+	text-align: center;
+}
+
+.talkboxright {
+	width: 260px;
+	float: right;
+}
+
+.talkboxtop {
+	height: 250px;
+}
+
+.talkboxbottom {
+	background: #f68712;
+}
+
+.talkbox .speakerimage {
+	margin-top: 25px;
+	width: 200px;
+	height: 200px;
+	border: 4px solid white;
 }

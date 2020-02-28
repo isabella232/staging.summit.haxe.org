@@ -4,7 +4,26 @@
 			<a href="../../#speakers">Speakers</a> &gt; <a href="../../speakers/::speaker.id::/">::speaker.name::</a> &gt; <a href="./">::talk.title::</a>
 		</div>
 
-		<h2>::talk.title::</h2>
+		<div class="talkbox">
+			<div class="talkboxbg"></div>
+			<div class="talkboxcontent">
+				<div class="talkboxright">
+					<!-- TODO: don't hardcode this... -->
+					<img src="/eu/2020/images/banner.png" />
+				</div>
+				<div class="talkboxleft">
+					<div class="talkboxtop">
+						<div class="speakerimage">
+							<img src="../../images/speakers/::speaker.image::" />
+						</div>
+					</div>
+					<div class="talkboxbottom">
+						<h2><a href="../../speakers/::speaker.id::/">::speaker.name::</a></h2>
+						<h3>::talk.title::</h3>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		::if talk.time != ""::
 			<h3>::talk.time::</h3>
@@ -13,21 +32,5 @@
 		<p>
 			::new tink.template.Html(talk.content)::
 		</p>
-
-		<br />
-
-		<h4>Presented by:</h4>
-		<div class="speakerdetails">
-			<div class="speakerheader">
-				<div class="speakerimage">
-					<a href="../../speakers/::speaker.id::/"><img src="../../images/speakers/::speaker.image::" /></a>
-				</div>
-
-				<div class="speakerinfo">
-					<h2><a href="../../speakers/::speaker.id::/">::speaker.name::</a></h2>
-					<h3>::speaker.title::</h3>
-				</div>
-			</div>
-		</div>
 	</div>
 </section>
