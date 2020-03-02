@@ -479,21 +479,22 @@ iframe {
 }
 
 .talkbox {
-	width: 550px;
-	height: 444px;
+	width: 650px;
+	height: 400px;
 	margin: 0px auto 20px auto;
 	position: relative;
-	border: 3px solid black;
-	border-radius: 20px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
 }
 
 .talkbox h3 {
 	font-weight: bold;
-	margin-bottom: 3px;
+	font-size: 24px;
+	padding-bottom: 0;
 }
 
 .talkbox .talktitle {
-	margin-bottom: 12px;
+	margin-bottom: 5px;
 }
 
 .talkboxbg {
@@ -530,11 +531,6 @@ iframe {
 	width: 180px;
 }
 
-.talkboxtop {
-	text-align: center;
-	width: 350px;
-}
-
 .talkboxbottom {
 	background: #EEEEEE;
 	opacity: 80%;
@@ -544,12 +540,14 @@ iframe {
 	padding: 10px;
 }
 
-.talkboxbottom > div {
-	width: 350px;
+.talkboxbottom > div, .talkboxtop {
+	width: 425px;
 	text-align: center;
 }
 
-.talkboxbottom .summithaxeorg {
+.talkbox .summithaxeorg {
+	text-align: center;
+	text-decoration: underline;
 	font-weight: bold;
 }
 
@@ -558,4 +556,22 @@ iframe {
 	width: 200px;
 	height: 200px;
 	border: 3px solid white;
+}
+
+@media only screen and (min-width: 1100px) {
+	.talkbox {
+		zoom: 1.15;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.talkbox {
+		zoom: 0.75;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.talkbox {
+		zoom: 0.5;
+	}
 }
