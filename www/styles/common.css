@@ -256,38 +256,77 @@ section.intro {
 }
 
 .breadcrumb {
-	margin-bottom: 30px;
+	font-size: 14px;
+	padding:40px 0 20px 0;
+}
+.breadcrumb a {
+	color: #257fc2;
 }
 
-.speakerdetails .speakerheader {
+.speakertop {
+	padding:20px 0;
+}
+
+.speakerheader {
 	display: flex;
-	margin-bottom: 12px;
 	justify-content: center;
 }
 
-.speakerdetails .speakerheader .speakerinfo {
+.speakerheader {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 }
 
-.speakerdetails .talks>li {
-	list-style-type: square;
+.speakerheader .speakerimage {
+	min-width: 240px;
+	height: 240px;
+	border-radius: 240px;
 }
 
-.speakerdetails .talks>li h3 {
-	margin: 2em 0 1.5em;
+.speakerheader .speakerinfo {
+	padding-left:1em;
+}
+
+.speakerheader .speakerinfo h1, .speakerheader .speakerinfo h3 {
 	text-align: left;
-	display: inline;
+	margin: 0;
+	padding: 0;
+	margin-bottom:10px;
 }
 
-.speakerdetails .talks>li p {
-	display: inline;
-}
-
-.speakerdetails h2.talkslist {
+.speakerheader .speakerinfo blockquote {
+	border-left:2px solid #ccc; 
+	padding:0 10px;
+	margin-left:10px;
+	font-style: italic;
 	text-align: left;
-	margin-top: 16px;
+}
+
+.speakertalkdetails h1 {
+	padding-left: 0.25em;
+}
+.speakertalkdetails .talks>li {
+	list-style-type: none;
+	margin: 0;
+    padding: 0.5em;
+}
+
+.speakertalkdetails .talks>li:not(:last-child) {
+	border-bottom:1px solid #ccc;
+}
+
+.speakertalkdetails .talks>li a {
+	color: #257fc2;
+}
+
+.speakertalkdetails .talks>li strong {
+	font-weight: 500;
+	font-size:110%;
+}
+
+.speakertalkdetails h1 {
+	text-align: left;
 }
 
 .talkpage h2 {
@@ -464,7 +503,7 @@ iframe {
 		width: 175px;
 	}
 
-	.speakerdetails .speakerheader {
+	.speakerheader {
 		display: block;
 		text-align: center;
 	}

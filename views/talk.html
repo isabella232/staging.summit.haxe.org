@@ -1,9 +1,12 @@
+
+<section class="breadcrumb">
+	<div>
+		<a href="../../#speakers">Speakers</a> &rsaquo; <a href="../../speakers/::speaker.id::/">::speaker.name::</a> &rsaquo; <a href="./">::talk.title::</a>
+	</div>
+</section>
+
 <section>
 	<div class="talkpage">
-		<div class="breadcrumb">
-			<a href="../../#speakers">Speakers</a> &gt; <a href="../../speakers/::speaker.id::/">::speaker.name::</a> &gt; <a href="./">::talk.title::</a>
-		</div>
-
 		<div class="talkbox">
 			<div class="talkboxbg"></div>
 			<div class="talkboxcontent">
@@ -24,13 +27,14 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</section>
 
-		::if talk.time != ""::
-			<h3>::talk.time::</h3>
-		::end::
-
-		<p>
-			::new tink.template.Html(talk.content)::
-		</p>
+<section>
+	<div>
+		<h1>::talk.title::</h1>
+		::if talk.time != ""::<h2>::talk.time::</h2>::end::
+		
+		::new tink.template.Html(talk.content)::
 	</div>
 </section>

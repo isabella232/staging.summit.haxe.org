@@ -1,37 +1,36 @@
-<section class="speakerdetails">
+
+<section class="breadcrumb">
 	<div>
-		<div class="breadcrumb">
-			<a href="../../#speakers">Speakers</a> &gt; <a href="./">::speaker.name::</a>
+		<a href="../../#speakers">Speakers</a> &rsaquo; <a href="./">::speaker.name::</a>
+	</div>
+</section>
+
+<section class="speakertop">
+	<div class="speakerheader">
+		<div class="speakerimage">
+			<img src="../../images/speakers/::speaker.image::" />
 		</div>
 
-		<div class="speakerheader">
-			<div class="speakerimage">
-				<img src="../../images/speakers/::speaker.image::" />
-			</div>
-
-			<div class="speakerinfo">
-				<h2>::speaker.name::</h2>
-				<h3>::speaker.title::</h3>
-			</div>
+		<div class="speakerinfo">
+			<h1>::speaker.name::</h1>
+			<h3>::speaker.title::</h3>
+			<blockquote>::speaker.bio::</blockquote>
 		</div>
+	</div>
+</section>
 
-		<p>
-			::speaker.bio::
-		</p>
-
-		::if speaker.talks.length > 0::
-			<h2 class="talkslist">Talks:</h2>
-			<ul class="talks">
-				::for talk in speaker.talks::
-					<li>
-						<h3><a href="../../talks/::talk.id::/">::talk.title::</a></h3>
-
-						<p>
-							::talk.description::
-						</p>
-					</li>
-				::end::
-			</ul>
-		::end::
+<section class="speakertalkdetails">
+	<div>
+	::if speaker.talks.length > 0::
+		<h1>Talks</h1>
+		<ul class="talks">
+			::for talk in speaker.talks::
+				<li>
+					<strong><a href="../../talks/::talk.id::/">::talk.title::</a></strong>
+					<em>::talk.description::</em>
+				</li>
+			::end::
+		</ul>
+	::end::
 	</div>
 </section>
