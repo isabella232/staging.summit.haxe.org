@@ -259,7 +259,7 @@ section.intro {
 	font-size: 14px;
 	padding:40px 0 20px 0;
 }
-.breadcrumb a {
+.breadcrumb a, .news li a, .speakertalkdetails .talks>li a {
 	color: #257fc2;
 }
 
@@ -314,10 +314,6 @@ section.intro {
 
 .speakertalkdetails .talks>li:not(:last-child) {
 	border-bottom:1px solid #ccc;
-}
-
-.speakertalkdetails .talks>li a {
-	color: #257fc2;
 }
 
 .speakertalkdetails .talks>li strong {
