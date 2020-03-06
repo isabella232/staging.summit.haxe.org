@@ -36,6 +36,6 @@ class Utils {
 			extraStyles = [];
 		}
 
-		File.saveContent(outPath, minifyHtml(Views.main(rootPath, title, content, config, extraStyles)));
+		File.saveContent(outPath, minifyHtml(Views.main(rootPath, title, content, config, extraStyles, Date.now().getFullYear())));
 	}
 }
